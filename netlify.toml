@@ -1,5 +1,5 @@
 [build]	
-    base = "site
+    base = "site"
     command = "npm run build"
     build = "build"
 
