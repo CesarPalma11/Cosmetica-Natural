@@ -1,0 +1,35 @@
+.profile {
+    display: grid;
+    
+}
+.profile img {
+    width: 30px;
+    margin-top: 0rem;
+    margin-left: 2rem;
+    border-radius: 1000px;
+    
+}
+.profile-h2{
+    margin-left: 0rem;
+    margin-top: .5rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+.btn-log {
+    cursor: pointer;
+    text-decoration: none;
+    background: none;
+    font-size: 12px;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 2rem;
+    background: none;
+    border: 1px solid #000;
+    transition: .5s;
+    border-radius: 200px;
+}
+.btn-log:hover {
+    color: #fff;
+    background: #000;
+}
