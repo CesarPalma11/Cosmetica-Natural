@@ -1,9 +1,18 @@
-[build]	
-    command = "CI= npm run build"
-    build = "build"
+[[plugins]]
+package = "netlify-plugin-rss"
+  [plugins.inputs]
+  # required configs, customize as needed
+  dirToScan = "/organizations" # a subfolder to scan. "/" to scan all
+  authorName = "GoodHere.org"
+  site_url = "https://goodhere.org"
+  title = "GoodHere.org RSS Feed"
+  rssDescription = "GoodHere.org RSS Feed"
+  categories = ['Social Impact', 'Startups', 'Funding']
 
-[build.environment]	
-    NODE_ENV = "development"	
-
-[context.production.environment]	
-    NODE_ENV = "production"
+  
+[build]
+  base    = "site"
+  publish = "public"
+  command = "npm run build"
+  # Always build the site, regardless of code updates: https://bit.ly/3fxbQO6
+  ignore = "sh this-always-fails"
