@@ -1,17 +1,16 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Rout from './rout';
 import Footer from "./Footer";
 import ListOfProducts from './Components/Products'
 import './App.css'
-import { useCartContext } from './Components/Cart';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
 
 
-  
   //ADD TO CART
   const [cart, setCart] = useState([])
 //PAGE PRODUCT
@@ -66,8 +65,9 @@ const addtocart = (product) =>
   })
   if (exist) 
   {
-    
-    setCart([...cart, {...exist, qty: exist.qty + 1}])
+    setCart(cart.map((item) => {
+      return item.id === product.id ? {...exist, qty: exist.qty + 1 } : item
+    }))
   }
   else {
     setCart([...cart, {...product, qty:1}])
@@ -78,14 +78,15 @@ const addtocart = (product) =>
 
   return (
     <>
+    
       <BrowserRouter>
-      <React.Fragment>
-      <Navbar count={cart.length} setCountProducts={setCountProducts} search={search} setSearch={setSearch} searchproduct={searchproduct}/>
-      </React.Fragment>
-      <Rout countProducts={countProducts} setCountProducts={setCountProducts} setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>
-      <Footer />
-      
+      <React.Fragment>        
+      <Navbar count={cart.length} setCountProducts={setCountProducts} search={search} setSearch={setSearch} searchproduct={searchproduct}/>     
+      </React.Fragment>     
+      <Rout countProducts={countProducts} setCountProducts={setCountProducts} setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcatefilter={allcatefilter} addtocart={addtocart}/>      
+      <Footer />      
       </BrowserRouter>
+      
       
     </>
 
