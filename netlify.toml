@@ -1,7 +1,6 @@
 [build]	
     base = "site
     command = "npm run build"
-    publish = "public"
     build = "build"
 
 [build.environment]	
@@ -9,3 +8,4 @@
 
 [context.production.environment]	
     NODE_ENV = "production"
+  
