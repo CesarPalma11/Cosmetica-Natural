@@ -14,7 +14,7 @@ const footer = () => {
           <h3>Nuestros productos</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis adipisci</p><br></br>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut unde delectus quam, optio, facere cumque consequatur placeat adipisci 
-            quibusdam nobis officiis! Architecto, ipsa quisquam! Quod nostrum tenetur voluptatibus accusamus provident!</p>
+            quibusdam nobis officiis! Archistecto, ipsa quisquam! Quod nostrum tenetur voluptatibus accusamus provident!</p>
         </div>
       </div>
 
