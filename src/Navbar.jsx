@@ -16,12 +16,12 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
         
       <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid">
-    <Link to='/' class="navbar-brand me-auto">Dulce Terroir</Link>
+    <Link to='/' class="navbar-brand me-auto" ><img src='./img/logo_dt.png' style={{width:'60px'}}></img></Link>
     
 
     <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header border-bottom">
-        <h5 class="offcanvas-title fs-4" id="offcanvasNavbarLabel">Dulce Terroir</h5>
+        <h5 class="offcanvas-title fs-4" id="offcanvasNavbarLabel"><img src='./img/logo_dt.png' style={{width:'60px'}}></img></h5>
         <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -72,7 +72,7 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
       </Link>
       {/*------------------ - BAG COUNT CART - ---------------- */}
 
-      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style={{marginTop:'-2rem'}} >
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
