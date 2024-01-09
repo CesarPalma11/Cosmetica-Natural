@@ -40,7 +40,7 @@ export const ListOfProducts = [
             id: 'jabon-cara-cinco',
             name:"Jabon masajeador de manzanilla y manteca de cacao",
             price:'1300',
-            images:"./img/soap.png",
+            images:"../img/soap.png",
             path: '/jabondos',
             desc: 'jabones blanqueadores de algo',
             cat: 'exfoliantes'
@@ -49,7 +49,7 @@ export const ListOfProducts = [
             id: 'jabon-cara-seis',
             name:"Jabon de lavanda y manteca de cacao",
             price:'1200',
-            images:"./img/soap.png",
+            images:"../img/soap.png",
             path: '/jabondos',
             desc: 'jabones blanqueadores de algo',
             cat: 'blanqueadores'
@@ -59,7 +59,7 @@ export const ListOfProducts = [
             id:7,
             name:"Jabon de lavanda y manteca de cacao",
             price:'1200',
-            images:"./img/soap.png",
+            images:"../img/soap.png",
             path: '/jabondos',
             desc: 'jabones blanqueadores de algo',
             cat: 'blanqueadores'
@@ -68,7 +68,7 @@ export const ListOfProducts = [
             id:8,
             name:"Jabon de lavanda y manteca de cacao",
             price:'1200',
-            images:"./img/soap.png",
+            images:"../img/soap.png",
             path: '/jabondos',
             desc: 'jabones blanqueadores de algo',
             cat: 'blanqueadores'

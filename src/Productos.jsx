@@ -58,7 +58,7 @@ return (
                       <p className='card-text' style={{color: 'black'}}>${product.price}</p>
                       </div>
                     </Link>
-                    <div className='link-products-home' style={{marginTop: '0rem', marginLeft:'4rem', marginBottom:'3rem'}}>
+                    <div className='link-products' style={{marginTop: '0rem', marginLeft:'4rem', marginBottom:'3rem'}}>
                     <button className='btn btn-success' type='button' onClick={() => addtocart (product)}>Agregar al carrito</button>
                     </div>
                   </div>

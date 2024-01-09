@@ -152,15 +152,23 @@ ul {
     .btn-success {
         margin-left: 3rem;
     }
+    
 }
 @media (max-width: 1024px) {
     .btn-success {
         margin-left: -12rem;
     }
+    .link-products-home a{
+        margin-left: -15rem;
+    }
+    
 }
 @media (max-width: 800px) {
     .btn-success {
         margin-left: -16rem;
+    }
+    .link-products-home a{
+        margin-left: -19rem;
     }
 }
 @media (max-width: 768px) {
@@ -173,9 +181,13 @@ ul {
     .btn-success {
         margin-left: -25.2rem;
     }
+    .link-products-home a{
+        margin-left: -28rem;
+    }
 }
 @media (max-width: 390px) {
     .btn-success {
         margin-left: -25.2rem;
     }
+   
 }
