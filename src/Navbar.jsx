@@ -2,104 +2,59 @@ import React, { useState } from 'react';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Dropdown from './Dropdown';
 
 
 function Navbar(props, {search, setSearch, searchproduct} ) {
 
 
   
-  const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(true);
-    }
-  };
-
-  const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
-      setDropdown(false);
-    }
-  };
+ 
 
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          <img src='./img/logo_dt.png' alt=''></img>
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Inicio
-            </Link>
-          </li>
-          <li
-            className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-          >
-            <Link
-              to='/services'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Tienda <i className='fas fa-caret-down' />
-            </Link>
-            {dropdown && <Dropdown />}
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/products'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Sobre Nosotros
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/contact-us'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Contacto
-            </Link>
-          </li>
-
-           
-
-          <li>
-            <Link
-              to='/sign-up'
-              className='nav-links-mobile'
-              onClick={closeMobileMenu}
-            >
-              Sign Up
-            </Link>
-          </li>
-
-
-          
-        </ul>
-        <Button />
-
+  
         
-         {/*------------------ + BAG COUNT CART + ---------------- */}
+      <nav class="navbar navbar-expand-lg nav-dark fixed-top">
+  <div class="container">
+    <Link to='/' class="navbar-brand me-auto">Dulce Terroir</Link>
+    
 
-         <Link to="/cart">
+    <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header text-black border-bottom">
+        <h5 class="offcanvas-title fs-4" id="offcanvasNavbarLabel">Dulce Terroir</h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+          <li class="nav-item mx-2">
+            <Link to='/' className='nav-link active' aria-current="page">Inicio</Link>
+          </li>
+          <li class="nav-item mx-2">
+            <Link to= '/products' className='nav-link'>Sobre Nosotros</Link>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <Link to='/productos' className='nav-link dropdown-toggle' role='button' data-bs-toggle="dropdown">Tienda</Link>
+            
+            <ul class="dropdown-menu">
+              <li><Link to='/productos' class="dropdown-item">Jabones</Link></li>
+              <li><Link to='/' class="dropdown-item" >Blanqueadores</Link></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><Link to='/' class="dropdown-item">¿Como usarlos?</Link></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <Link to= '/contacto' className='nav-link'>Contacto</Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {/*------------------ + BAG COUNT CART + ---------------- */}
+         
+  <Link to="/cart">
           <div className='nav-bag'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,14 +71,12 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
           </span>
           </div>
       </Link>
-
-
-          {/*------------------ - BAG COUNT CART - ---------------- */}
-      </nav>
-      
-
-
-      
+      <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      {/*------------------ - BAG COUNT CART - ---------------- */}
+  </div>
+</nav>
 
       
     </>

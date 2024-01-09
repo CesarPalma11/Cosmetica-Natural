@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 
+
 import { MercadoPagoConfig, Preference} from "mercadopago";
 
 const client = new MercadoPagoConfig({
@@ -15,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get("/", (req, res, id) => {
+app.get("/", (req, res) => {
     res.send("el servidor funciona! :)");
 });
 

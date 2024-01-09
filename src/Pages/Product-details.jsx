@@ -1,6 +1,6 @@
 import React from 'react'
 import ListOfProducts from '../Components/Products';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import './JabonDos.css'
 import ReactImageMagnify from 'react-image-magnify';
 const ProductDetails = ({addtocart}) => {
