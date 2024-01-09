@@ -25,40 +25,50 @@ function search(items) {
 return (
     <main>
         <div>
+          <form className='d-flex' role='search'>
             <input
-                className='searcher'
+                className='form-control me-2'
                 autoComplete='off'
                 type="search"
+                aria-label='Search'
                 placeholder="¿Que Buscas?"
                 id="Buscador"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
             />
-            
+          </form>
         </div>
-        <div className='container-products'>
-            
-          <ul>
+        <div className='container'>
+            <div className='row' style={{padding: '3rem'}}>
+          
             {
               search(profileData).map((product, index) => {
                 return (
-                  <div className='container-styles'>
-                  <li key={index}>
+                  <div className='col-md'>
+                    <div className='card' style={{width: '260px', height:'490px',marginLeft:'15px', border: '1px solid #000', borderRadius: '20px', marginBottom: '2.2rem'}}>
+                  <div key={index}>
                     <Link 
                     className='container-link'
+                    target='_parent'
                     to={`/productos/${product.id}`}
                     >
-                      <img src={product.images} alt={index}></img>
-                      <h1 className='container-products-name'>{product.name}</h1>
-                      <p className='price-products-soap-container'>${product.price}</p>
+                      <img  className='card-img-top' style={{marginTop: '-.0rem', marginBottom:'-.2rem'}} src={product.images} alt={index}></img>
+                      <div className='card-body'>
+                      <p className='card-text' style={{color: 'black'}}>{product.name}</p>
+                      <p className='card-text' style={{color: 'black'}}>${product.price}</p>
+                      </div>
                     </Link>
-                    <button className='btn-products-all' onClick={() => addtocart (product)}>Agregar al carrito</button>
-                  </li>
+                    <div className='link-products-home' style={{marginTop: '0rem', marginLeft:'4rem', marginBottom:'3rem'}}>
+                    <button className='btn btn-success' type='button' onClick={() => addtocart (product)}>Agregar al carrito</button>
+                    </div>
+                  </div>
+                  </div>
                   </div>
                 )
               })
             }
-            </ul>
+            
+          </div>
         </div>
     </main>
 );

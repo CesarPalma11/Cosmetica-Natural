@@ -3,7 +3,6 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-
 function Navbar(props, {search, setSearch, searchproduct} ) {
 
 
@@ -15,13 +14,13 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
     <>
   
         
-      <nav class="navbar navbar-expand-lg nav-dark fixed-top">
-  <div class="container">
+      <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
     <Link to='/' class="navbar-brand me-auto">Dulce Terroir</Link>
     
 
     <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header text-black border-bottom">
+      <div class="offcanvas-header border-bottom">
         <h5 class="offcanvas-title fs-4" id="offcanvasNavbarLabel">Dulce Terroir</h5>
         <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
@@ -36,7 +35,7 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
           <li class="nav-item dropdown mx-2">
             <Link to='/productos' className='nav-link dropdown-toggle' role='button' data-bs-toggle="dropdown">Tienda</Link>
             
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><Link to='/productos' class="dropdown-item">Jabones</Link></li>
               <li><Link to='/' class="dropdown-item" >Blanqueadores</Link></li>
               <li>
@@ -71,10 +70,11 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
           </span>
           </div>
       </Link>
+      {/*------------------ - BAG COUNT CART - ---------------- */}
+
       <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-      {/*------------------ - BAG COUNT CART - ---------------- */}
   </div>
 </nav>
 
