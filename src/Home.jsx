@@ -93,7 +93,7 @@ const Home = ({addtocart}) => {
             }
             <div className='link-products-home' style={{marginTop: '0rem', marginLeft:'0rem', marginBottom:'3rem'}}>
               <Link to='/productos' target='_parent' >
-              <button type='button' className='btn btn-success'>Ver todo</button>
+              <button type='button' className='btn btn-custom'>Ver todo</button>
               </Link>
             </div>
     
@@ -133,7 +133,7 @@ const Home = ({addtocart}) => {
             }
             <div className='link-products-home' style={{marginTop: '0rem', marginLeft:'0rem', marginBottom:'3rem'}}>
               <Link to='/productos' target='_parent' >
-              <button type='button' className='btn btn-success'>Ver todo</button>
+              <button type='button' className='btn btn-custom'>Ver todo</button>
               </Link>
             </div>
     
@@ -174,7 +174,7 @@ const Home = ({addtocart}) => {
             }
             <div className='link-products-home' style={{marginTop: '0rem', marginLeft:'0rem', marginBottom: '3rem'}}>
               <Link to='/productos' target='_parent' >
-              <button type='button' className='btn btn-success'>Ver todo</button>
+              <button type='button' className='btn btn-custom'>Ver todo</button>
               </Link>
             </div>
     
