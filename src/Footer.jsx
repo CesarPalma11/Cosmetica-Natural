@@ -1,26 +1,63 @@
 import React from 'react'
 import './Footer.css'
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
+import { FiMapPin } from "react-icons/fi";
 const footer = () => {
   return (
-    <div className='footer_main'>
-      <div className='footer_container'>
-        <div className='footer_info info-one'>
-          <ul>
-            
-          </ul>
+    <div className='main-footer'>
+      <div className='container'>
+        <div className='row'>
+           {/*COLUMN 1 */}
+           <div className='col-md-3 col-sm-6'>
+            <h4>Contacto</h4>
+            <ul className='list-unstyled'>
+              <li>Buenos Aires<FiMapPin /></li>
+              <li>+5491142433924</li>
+              <li>lorem</li>
+              <li>lorem</li>
+            </ul>
+           </div>
+           {/*COLUMN 2 */}
+           <div className='col-md-3 col-sm-6'>
+            <h4>lorem ipsum</h4>
+            <ul className='list-unstyled'>
+              <li>lorem</li>
+              <li>lorem</li>
+              <li>lorem</li>
+              <li>lorem</li>
+            </ul>
+           </div>
+
+           {/*COLUMN 3 */}
+           <div className='col-md-3 col-sm-6'>
+            <h4>Redes Sociales</h4>
+            <ul className='list-unstyled'>
+              <li><a href='#' without rel='noreferrer'>Instagram<FaInstagram /></a></li>
+              <li><a href='#' without rel='noreferrer'>Facebook<FaFacebook /></a></li>
+              <li><a href='#' without rel='noreferrer'>TikTok<FaTiktok /></a></li>
+            </ul>
+           </div>
+            {/*COLUMN 3 */}
+          <div className='col-md-3 col-sm-6'>
+            <h4>Redes Sociales</h4>
+            <ul className='list-unstyled'>
+              <li>lorem</li>
+              <li>lorem</li>
+              <li>lorem</li>
+              <li>lorem</li>
+            </ul>
+           </div>
         </div>
-        <span></span>
-        <div className='footer_info info-two'>
-          <h3>Nuestros productos</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis adipisci</p><br></br>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut unde delectus quam, optio, facere cerweumque consequatur placeat adipisci 
-            quibusdam nobis officiis! Archistecto, ipsa quisquam! Quod nostrum tenetur voluptatibus accusamus provident!</p>
+        {/* FOOTER BUTTOM*/}
+        <div className='footer-bottom'>
+          <p className='text-xs-center'>
+            &copy;{new Date().getFullYear()} Dulce terroir - Todos los derechos reservados
+          </p>
         </div>
       </div>
-
-      
-
-      </div>
+    </div>
   )
 }
 
