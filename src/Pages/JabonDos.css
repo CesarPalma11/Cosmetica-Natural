@@ -34,18 +34,23 @@
     letter-spacing: 2px;
 }
 .box .row span {
-    color: crimson;
+    color: #000;
+    font-size: 20px;
 }
 .box p {
     line-height: 1.5;
     margin: 15px 0;
 }
 .box .btn-cart{
-    background: #333;
+    background: green;
     color: white;
     outline: none;
     border: none;
     cursor: pointer;
     padding: 10px 15px;
     margin-top: 15px;
+    transition: .5s;
+  }
+  .box .btn-cart:hover {
+    background: #1f6b08;
   }
