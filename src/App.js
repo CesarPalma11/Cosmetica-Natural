@@ -8,7 +8,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem("carrito"))  || [];
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"))  || '[]';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 //PAGE PRODUCT
 useEffect(() => {
 
-  localStorage.setItem("carrito", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart));
 }, [cart]);
 
   
