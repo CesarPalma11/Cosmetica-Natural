@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -14,14 +13,14 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
     <>
   
         
-      <nav class="navbar navbar-expand-lg fixed-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <Link to='/' class="navbar-brand me-auto" ><img src='./img/logo_dt.png' style={{width:'60px'}}></img></Link>
+    <Link to='/' class="navbar-brand me-auto" ><img src='../img/logo_dt.png' alt='img' style={{width:'60px'}}></img></Link>
     
 
     <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header border-bottom">
-        <h5 class="offcanvas-title fs-4" id="offcanvasNavbarLabel"><img src='./img/logo_dt.png' style={{width:'60px'}}></img></h5>
+        <h5 class="offcanvas-title fs-4" id="offcanvasNavbarLabel"><img src='../img/logo_dt.png' alt='img' style={{width:'60px'}}></img></h5>
         <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -66,14 +65,14 @@ function Navbar(props, {search, setSearch, searchproduct} ) {
             <path d="M8 1a2 2 0 0 0-2 2v2H5V3a3 3 0 1 1 6 0v2h-1V3a2 2 0 0 0-2-2zM5 5H3.36a1.5 1.5 0 0 0-1.483 1.277L.85 13.13A2.5 2.5 0 0 0 3.322 16h9.355a2.5 2.5 0 0 0 2.473-2.87l-1.028-6.853A1.5 1.5 0 0 0 12.64 5H11v1.5a.5.5 0 0 1-1 0V5H6v1.5a.5.5 0 0 1-1 0V5z" />
           </svg>
           <span className='bag-quantity'>
-          <sup>{props.count}</sup>
+          <sup>{props.count || ''}</sup>
           </span>
           </div>
       </Link>
       {/*------------------ - BAG COUNT CART - ---------------- */}
 
       <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style={{marginTop:'-2rem'}} >
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" style={{border: 'none'}}></span>
     </button>
   </div>
 </nav>

@@ -39,14 +39,20 @@
     transition: .2s;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: -20rem;
 }
 .price-container-product-details {
     font-family: 'B612', sans-serif;
     text-align: start;
+    margin-left: 1rem;
+    font-size: 17px;
 }
 .btn-product-detail:hover {
     border: 1px solid #000;
     color: #000;
+}
+.product-desc-container {
+    margin-left: -25rem;
 }
 #imageMagnifyer {
     width: 370px;

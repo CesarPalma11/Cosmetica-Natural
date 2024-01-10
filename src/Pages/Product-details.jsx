@@ -36,7 +36,7 @@ const ProductDetails = ({addtocart}) => {
         
           <h1 className='h1-container-product-details'>{product.name}</h1>
           <p className='price-container-product-details'>${product.price}</p>
-          <p>{product.desc}</p>
+          <p className='product-desc-container'>{product.desc}</p>
           <button className='btn-product-detail' onClick={() => addtocart (product)}>Agregar al carrito</button>
       </div>
     </div>

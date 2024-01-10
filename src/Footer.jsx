@@ -6,7 +6,7 @@ import { FaTiktok } from "react-icons/fa";
 import { FiMapPin } from "react-icons/fi";
 const footer = () => {
   return (
-    <div className='main-footer'>
+    <div className='main-footer bg-body-tertiary'>
       <div className='container'>
         <div className='row'>
            {/*COLUMN 1 */}

@@ -20,7 +20,11 @@ const Home = ({addtocart}) => {
   const [profileData] = useState(ListOfProducts);
   
   return (
-    <div className='banner'>
+
+
+    
+    <div className='container-global-home'>
+      <div className='banner-img'>
       <Swiper 
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={10}
@@ -55,11 +59,7 @@ const Home = ({addtocart}) => {
   
     </Swiper>
         
-
-      
-
-
-        
+    </div>
 
 
               {/* SECTION ITEMS*/}
@@ -69,9 +69,10 @@ const Home = ({addtocart}) => {
               {
               ListOfProducts.slice(0, visible ,profileData).map((product, index) => {
                 return (
-                  <div className='col-md'>
+                  <div className='col-sm'>
+                    
                     <div className='card' style={{width: '260px', height:'410px',marginLeft:'15px', border: '1px solid #000', borderRadius: '20px', marginBottom: '2.2rem'}}>
-                  <div key={index}>
+                      <div key={index}>
                         <Link 
                         className='container-link'
                         target='_parent'
@@ -86,6 +87,7 @@ const Home = ({addtocart}) => {
                         </Link>                   
                       </div>
                     </div>
+                    
                   </div>
                   
                 )
