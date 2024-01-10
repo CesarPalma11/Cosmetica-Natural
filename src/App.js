@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from "./Navbar";
 import Rout from './rout';
@@ -8,11 +8,14 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("carrito")) || '[]';
+
+
 function App() {
 
-
+  
   //ADD TO CART
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(cartFromLocalStorage)
 //PAGE PRODUCT
 
 
@@ -61,20 +64,30 @@ function App() {
 const addtocart = (product) =>
 {
   const exist = cart.find((x) => {
+    
     return x.id === product.id
+    
   })
   if (exist) 
   {
     setCart(cart.map((item) => {
       return item.id === product.id ? {...exist, qty: exist.qty + 1 } : item
+      
     }))
   }
   else {
+
     setCart([...cart, {...product, qty:1}])
     alert("Agregado al carrito!")
+    
   }
   
 }
+useEffect(() => {
+
+    localStorage.setItem("carrito", JSON.stringify(cart));
+}, [cart]);
+
 
   return (
     <>
@@ -91,6 +104,7 @@ const addtocart = (product) =>
     </>
 
   );
-}
+  }
+
 
 export default App;
