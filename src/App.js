@@ -8,7 +8,7 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem("carrito")) || '[]';
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem("carrito"))  || [];
 
 
 function App() {
