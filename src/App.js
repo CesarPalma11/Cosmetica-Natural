@@ -17,7 +17,10 @@ function App() {
   //ADD TO CART
   const [cart, setCart] = useState(cartFromLocalStorage)
 //PAGE PRODUCT
+useEffect(() => {
 
+  localStorage.setItem("carrito", JSON.stringify(cart));
+}, [cart]);
 
   
   const [countProducts, setCountProducts] = useState(0);
@@ -83,10 +86,7 @@ const addtocart = (product) =>
   }
   
 }
-useEffect(() => {
 
-    localStorage.setItem("carrito", JSON.stringify(cart));
-}, [cart]);
 
 
   return (

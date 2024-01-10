@@ -53,7 +53,6 @@ const Cart = ({cart, setCart, countProducts, setCountProducts}) => {
             setCart(cart.map((item) =>
             {
                 return item.id === product.id ? {...exist, qty: exist.qty + 1} : item
-                
             }))
         }
        
@@ -94,13 +93,11 @@ const Cart = ({cart, setCart, countProducts, setCountProducts}) => {
     //total price
 
     const total = cart.reduce((price, item) => price + item.qty * item.price, 0)
-    
   return (
     <>
     <div className='cart'>
         {
             cart.length === 0 &&
-    
             <>
             <div className='empty_cart'>
                 <h2>Tu carrito esta vacio</h2>
@@ -132,6 +129,7 @@ const Cart = ({cart, setCart, countProducts, setCountProducts}) => {
                                     <input type='number' value={item.qty} min="0"></input>
                                     <button className='deq' disabled={item.qty <= 1} onClick={() => decqrty(item)}>-</button>
                                 </div>
+                                
                                 <div className='icon'>
                                     <li onClick={() => removeproduct(item)}><FaTrashAlt /></li>
                                 </div>
@@ -145,16 +143,12 @@ const Cart = ({cart, setCart, countProducts, setCountProducts}) => {
         <div className='bottom'>
             {
                 cart.length > 0 &&
-                
                 <>
                 <div className='total'>
-                    
                     <h4>Subtotal (Sin Envio): ${total}</h4>
-                    
                 </div>
                 <button onClick={handleBuy}>Iniciar Compra</button>
                 {preferenceId && <Wallet initialization={{preferenceId : preferenceId}} />}
-                
                 </>
             }
         </div>
