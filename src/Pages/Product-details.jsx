@@ -11,10 +11,10 @@ const ProductDetails = ({addtocart}) => {
 
 
   return (
-
-    <div className='container-product-details'>
-      <div className='container-product-details-one'>
-        <div id='imageMagnifyer'>
+    
+    <div className='app'>
+      <div className='details'>
+        <div id='big-img'>
           <ReactImageMagnify {...{
               smallImage: {
                 isFluidWidth: true,
@@ -24,23 +24,27 @@ const ProductDetails = ({addtocart}) => {
               },
               largeImage: {
                 src: product.images,
-                width: 1200,
-                height:900
+                width: 600,
+                height: 600
               },
             }}
           ></ReactImageMagnify>
           </div>
-      </div>
+      
 
-      <div className='container-product-details-two'>
+<div className='box'>
+  <div className='row'>
+      
         
           <h1 className='h1-container-product-details'>{product.name}</h1>
-          <p className='price-container-product-details'>${product.price}</p>
-          <p className='product-desc-container'>{product.desc}</p>
-          <button className='btn-product-detail' onClick={() => addtocart (product)}>Agregar al carrito</button>
+          <span>${product.price}</span>
+          <p>{product.desc}</p>
+          <button className='btn-cart' onClick={() => addtocart (product)}>Agregar al carrito</button>
+
+          </div>
       </div>
     </div>
-    
+</div>
   )
 }
 
