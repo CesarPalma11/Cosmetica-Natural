@@ -17,19 +17,18 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-    res.send("el servidor funciona! :)");
+    res.send("el servidor funciona!");
 });
 
 
 app.post("/create_preference", async (req, res) => {
-    const product = req.body;
     try{
         const body = {
             items: [
                 {
-                    title: product.name,
-                    quantity: 1,
-                    unit_price: product.price,
+                    title: req.body.title,
+                    quantity: Number(req.body.quantity),
+                    unit_price: Number(req.body.price),
                     currency_id: "ARS",
                 },
             ],

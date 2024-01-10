@@ -16,7 +16,7 @@ import { ToastContainer, toast } from 'react-toastify';
 function App() {
 
   //ADD TO CART
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(cartFromLocalStorage)
 //PAGE PRODUCT
 useEffect(() => {
 
