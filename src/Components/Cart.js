@@ -7,6 +7,7 @@ import { FaTrashAlt } from "react-icons/fa";
 
 
 
+
 export const useCartContext = () => useContext(Cart);
 const Cart = ({cart, setCart, countProducts, setCountProducts}) => {
 

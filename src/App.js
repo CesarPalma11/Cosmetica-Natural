@@ -5,17 +5,18 @@ import Rout from './rout';
 import Footer from "./Footer";
 import ListOfProducts from './Components/Products'
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"))  || '[]';
+   const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"))  || '[]'; 
 
 
 function App() {
 
-  
   //ADD TO CART
-  const [cart, setCart] = useState(cartFromLocalStorage)
+  const [cart, setCart] = useState([])
 //PAGE PRODUCT
 useEffect(() => {
 
@@ -73,7 +74,11 @@ const addtocart = (product) =>
   })
   if (exist) 
   {
+    toast.info("Este producto ya esta en el carrito", {
+      position: "bottom-right"
+    })
     setCart(cart.map((item) => {
+      
       return item.id === product.id ? {...exist, qty: exist.qty + 1 } : item
       
     }))
@@ -81,8 +86,12 @@ const addtocart = (product) =>
   else {
 
     setCart([...cart, {...product, qty:1}])
-    alert("Agregado al carrito!")
+    toast.success(`${product.name} agregado al carrito`, {
+      position: "bottom-right"
+      
+    })
     
+
   }
   
 }
@@ -93,6 +102,7 @@ const addtocart = (product) =>
     <>
     
       <BrowserRouter>
+      <ToastContainer />
       <React.Fragment>        
       <Navbar count={cart.length} setCountProducts={setCountProducts} search={search} setSearch={setSearch} searchproduct={searchproduct}/>     
       </React.Fragment>     
